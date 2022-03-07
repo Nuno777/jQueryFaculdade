@@ -3,13 +3,14 @@ $(document).ready(function () {
         var teste ="img/"+ $(this).attr("id")+"_over.gif"
         $(this).attr("src", teste)
     }, function () {
-        var teste ="img/"+ $(this).attr("id")+".gif"
+         teste ="img/"+ $(this).attr("id")+".gif"
         $(this).attr("src", teste)
     });
 
     //ainda nao feito
      $("#img").mousedown(function () {
-        $(this).attr('src', 'img/alunos_down.gif')
+        teste="img/"+$(this).attr('src')+ '_down.gif'
+        $(this).attr("src", teste)
     });
     $("#img").mouseout(function () {
         $(this).attr('src', 'img/alunos.gif')
