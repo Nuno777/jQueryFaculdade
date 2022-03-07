@@ -1,13 +1,17 @@
-$(document).ready(function (){
-    $("#imagem").hover(function(){
-        $(this).attr('src','img/alunos_over.gif')
-    },function(){
-        $(this).attr('src','img/alunos_down.gif')
+$(document).ready(function () {
+    $("img").hover(function () {
+        var teste ="img/"+ $(this).attr("id")+"_over.gif"
+        $(this).attr("src", teste)
+    }, function () {
+        var teste ="img/"+ $(this).attr("id")+".gif"
+        $(this).attr("src", teste)
     });
-    $("#imagem").mousedown(function(){
-        $(this).attr('src','img/alunos_down.gif')
+
+    //ainda nao feito
+     $("#img").mousedown(function () {
+        $(this).attr('src', 'img/alunos_down.gif')
     });
-    $("#imagem").mouseout(function(){
-        $(this).attr('src','img/alunos.gif')
+    $("#img").mouseout(function () {
+        $(this).attr('src', 'img/alunos.gif')
     });
 });
