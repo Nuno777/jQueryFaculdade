@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ex5 - Validação formulário Jquery</title>
+        <title>Ex5 - Validação formulário Pattern</title>
     </head>
     <body>
         <form action="" method="post">
@@ -14,27 +14,28 @@
                 maxlength="12" required>
             <br>
             <label for="">Email</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email"
+                pattern="^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.(([0-9]{1,3})|([a-zA-Z]{2,3})|(aero|coop|info|museum|name))$"
+                required>
             <br>
             <label for="">Idade</label>
             <input type="number" name="age" id="age" min="18" max="100"
                 required>
             <br>
             <label for="">Telefone</label>
-            <input type="tel" name="tel" id="tel" required>
-            <br>
-            <label for="">Password</label>
-            <input type="password" name="password" id="password" minlength="6"
+            <input type="tel" name="tel" id="tel"
+                pattern="^9[1236][0-9]{7}$|^2[3-9][1-9][0-9]{6}$|^2[12][0-9]{7}$"
                 required>
             <br>
-            <label for="">ConfirmPassword</label>
-            <input type="password" name="passwordConfirm" id="passwordConfirm"
+            <label for="">Password</label>
+            <input type="password" name="password" id="password"
+                pattern="^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$"
+                minlength="6"
                 required>
             <br><br>
             <button type="submit">Enviar</button>
             <button type="reset">Limpar</button>
         </form>
         <script src="../jquery-3.6.0.min.js"></script>
-        <script src="Ex5.js"></script>
     </body>
 </html>
