@@ -7,3 +7,12 @@ $(document).ready(function () {
         $(this).css("background-color", "red");
     });
 });
+
+
+/*outra forma
+$("li").hover(function () {
+        $(this).attr("class", "ratocima");
+    }, function () {
+        $(this).attr("class", "normal");
+    });
+*/

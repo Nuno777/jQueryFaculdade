@@ -6,6 +6,19 @@ li{
     font-size: 20px;
     list-style-type: none;
     cursor: pointer;
-    /* color:white;
-    background-color:red; */
+    color:white;
+    background-color:red;
+}
+
+
+/* Outra forma
+ .normal{
+    color:white;
+    background-color:red;
+}
+
+.ratoCima{
+    color:red;
+    background-color:white;
 } 
+*/
