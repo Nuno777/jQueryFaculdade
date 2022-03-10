@@ -7,31 +7,29 @@
         <title>Ex5 - Validação formulário Jquery</title>
     </head>
     <body>
-        <form action="" method="post">
+        <form id="formdados" action="" method="post">
 
             <label for="">Nome</label>
-            <input type="text" name="name" id="name" minlength="3"
-                maxlength="12" required>
+            <input type="text" name="name" id="name" value="" required>
             <br>
             <label for="">Email</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" value="" required>
             <br>
             <label for="">Idade</label>
-            <input type="number" name="age" id="age" min="18" max="100" required>
+            <input type="number" name="age" id="age" min="18" required>
             <br>
             <label for="">Telefone</label>
             <input type="tel" name="tel" id="tel" required>
             <br>
             <label for="">Password</label>
-            <input type="password" name="password" id="password" minlength="6"
-                required>
+            <input type="password" name="password" id="password" required>
             <br>
             <label for="">ConfirmPassword</label>
             <input type="password" name="passwordConfirm" id="passwordConfirm"
                 required>
             <br><br>
-            <button type="submit">Enviar</button>
-            <button type="reset">Limpar</button>
+            <button id="btnsub" type="submit">Enviar</button>
+            <button id="btnres" type="reset">Limpar</button>
         </form>
         <script src="../jquery-3.6.0.min.js"></script>
         <script src="Ex5.js"></script>
