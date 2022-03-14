@@ -4,34 +4,31 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ex5 - Validação formulário Jquery</title>
+        <title>Ex6 - Validação formulário Jquery2</title>
     </head>
     <body>
         <form id="formdados" action="" method="post">
 
             <label for="">Nome</label>
             <input type="text" name="name" id="name" required>
+            <span class="errorNome error">Tem de preencher o campo nome</span>
             <br>
             <label for="">Email</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email"required>
+            <span class="errorEmail error">Tem de preencher o campo email</span>
             <br>
             <label for="">Idade</label>
             <input type="number" name="age" id="age" required>
+            <span class="errorIdade error">Tem de preencher o campo idade com superior ou igual a 18</span>
             <br>
             <label for="">Telefone</label>
             <input type="tel" name="tel" id="tel" required>
-            <br>
-            <label for="">Password</label>
-            <input type="password" name="password" id="password" required>
-            <br>
-            <label for="">ConfirmPassword</label>
-            <input type="password" name="passwordConfirm" id="passwordConfirm"
-                required>
+            <span class="errorTelefone error">Tem de preencher o campo telefone</span>
             <br><br>
             <button id="btnsub" type="submit">Enviar</button>
             <button id="btnres" type="reset">Limpar</button>
         </form>
         <script src="../jquery-3.6.0.min.js"></script>
-        <script src="Ex5.js"></script>
+        <script src="Ex6.js"></script>
     </body>
 </html>
