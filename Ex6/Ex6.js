@@ -9,23 +9,23 @@ $(document).ready(function () {
     $("#age").on("change keyup", verificarIdade);
     $("#tel").on("change", verificarTelefone);
 
-    /*  function validar() {
-         $(".error").hide();
- 
-         verificarNome();
-         verificarEmail();
-         verificarIdade();
-         verificarTelefone();
- 
-         if ($(".error:visible").length > 0) {
-             return false;
-         }
-         return true;
-     } */
+    /* function validar() {
+        $(".error").hide();
+
+        verificarNome();
+        verificarEmail();
+        verificarIdade();
+        verificarTelefone();
+
+        if ($(".error:visible").length > 0) {
+            return false;
+        }
+        return true;
+    } */
 
     function verificarNome() {
         var nome = $("#name").val().trim();
-        if (nome.length === 0) {
+        if (nome.length === 0 || nome.length < 3) {
             $(".errorNome").show();
         } else {
             $(".errorNome").hide();
@@ -34,11 +34,11 @@ $(document).ready(function () {
 
     function verificarEmail() {
         var email = $("#email").val().trim();
-        var testEmail = /^\S+@\S+.\S+$/;
-        if (email.length === 0 || !testEmail(email)) {
-            $(".errorEmail").hide();
-        } else {
+        var testEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (email.length === 0 || !testEmail.test(email)) {
             $(".errorEmail").show();
+        } else {
+            $(".errorEmail").hide();
         }
     }
 
@@ -53,7 +53,8 @@ $(document).ready(function () {
 
     function verificarTelefone() {
         var telefone = $("#tel").val().trim();
-        if (telefone < 9) {
+        var testTel = [0 - 9];
+        if (telefone === 0 || !testTel.test(telefone)) {
             $(".errorTelefone").show();
         } else {
             $(".errorTelefone").hide();
