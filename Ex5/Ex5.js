@@ -10,8 +10,9 @@ $(document).ready(function () {
         var telefone = $("#tel").val().trim();
         var pass = $("#password").val().trim();
         var passConfirm = $("#passwordConfirm").val().trim();
+        var testEmail = /^\S+@\S+.\S+$/;
 
-        if (email) {
+        if (!testEmail.test(email)) {
             mensagem += "\nCampo email deve ter um email valido";
         }
         if (nome === "") {
@@ -40,7 +41,7 @@ $(document).ready(function () {
         } else if (pass.length < 6) {
             mensagem += "\nCampo password deve ter pelo menos 6 digitos";
         } else if (pass != passConfirm) {
-            mensagem += "\nAs passwords devem ser iguais";
+            mensagem += "\nPassword diferentes";
         }
 
         if (mensagem !== "Erros na submissao:") {
