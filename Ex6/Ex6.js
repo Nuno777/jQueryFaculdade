@@ -54,8 +54,8 @@ $(document).ready(function () {
 
     function verificarTelefone() {
         var telefone = $("#tel").val().trim();
-        var testTel = [0 - 9];
-        if (telefone === 0 || !testTel.test(telefone)) {
+        //var testTel = [0 - 9];
+        if (telefone === 0 ) {
             $(".errorTelefone").show();
         } else {
             $(".errorTelefone").hide();
@@ -65,10 +65,12 @@ $(document).ready(function () {
 
     function verificarPass() {
         var pass = $("#password").val().trim();
-        if (telefone === 0 || !testTel.test(telefone)) {
-            $(".errorTelefone").show();
+        if (pass.length === 0 || pass.length<6) {
+            $(".errorPassword").show();
+            $(".errorPassConfirm").show();
         } else {
-            $(".errorTelefone").hide();
+            $(".errorPassword").hide();
+            $(".errorPassConfirm").hide();
         }
 
     }
