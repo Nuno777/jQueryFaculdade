@@ -8,6 +8,7 @@ $(document).ready(function () {
     $("#email").on("change keyup", verificarEmail);
     $("#age").on("change keyup", verificarIdade);
     $("#tel").on("change", verificarTelefone);
+    $("#password").on("change keyup", verificarPass);
 
     /* function validar() {
         $(".error").hide();
@@ -54,6 +55,16 @@ $(document).ready(function () {
     function verificarTelefone() {
         var telefone = $("#tel").val().trim();
         var testTel = [0 - 9];
+        if (telefone === 0 || !testTel.test(telefone)) {
+            $(".errorTelefone").show();
+        } else {
+            $(".errorTelefone").hide();
+        }
+
+    }
+
+    function verificarPass() {
+        var pass = $("#password").val().trim();
         if (telefone === 0 || !testTel.test(telefone)) {
             $(".errorTelefone").show();
         } else {
