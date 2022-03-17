@@ -67,12 +67,8 @@ $(document).ready(function () {
         var pass = $("#password").val().trim();
         if (pass.length === 0 || pass.length<6) {
             $(".errorPassword").show();
-            $(".errorPassConfirm").show();
         } else {
             $(".errorPassword").hide();
-            $(".errorPassConfirm").hide();
         }
-
     }
-
 });
